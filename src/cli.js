@@ -1,3 +1,5 @@
+// this file to example
+
 import readlineSync from 'readline-sync';
 
 const questions = () => {

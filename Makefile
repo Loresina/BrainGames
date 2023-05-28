@@ -4,6 +4,9 @@ brain-games:
 brain-even:
 	bin/brain-even.js
 
+brain-calc:
+	bin/brain-calc.js
+
 install:
 	npm ci
 
@@ -12,3 +15,4 @@ publish:
 
 lint:
 	npx eslint .
+
