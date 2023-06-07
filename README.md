@@ -7,4 +7,4 @@
 
 ### Asciinema
 
-<a href="https://asciinema.org/a/590083"></a>
+<a href="https://asciinema.org/a/590083" target="_blank"><img src="https://asciinema.org/a/590083.svg" /></a>
