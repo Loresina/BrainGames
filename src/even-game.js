@@ -1,6 +1,12 @@
 import gameLevel from './index.js';
 
-const createQuestion = () => Math.floor(Math.random() * 100);
+const createQuestion = () => {
+  const result = Math.floor(Math.random() * 100);
+  if (result === 0) {
+    createQuestion();
+  }
+  return result;
+};
 
 const getRightAnswer = (textQuestion) => {
   if (textQuestion % 2 === 0) {
@@ -11,10 +17,10 @@ const getRightAnswer = (textQuestion) => {
 
 const evenGame = () => {
   const questionTexst = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const textQuestion = createQuestion;
-  const rightAnswer = getRightAnswer;
+  // const textQuestion = createQuestion;
+  // const rightAnswer = getRightAnswer;
 
-  gameLevel(questionTexst, textQuestion, rightAnswer);
+  gameLevel(questionTexst, createQuestion, getRightAnswer);
 };
 
 export default evenGame;
