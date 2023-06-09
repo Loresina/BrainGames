@@ -26,7 +26,7 @@ const getRightAnswer = (textQuestion) => {
 
   if (mysteryIndex <= 5) {
     plusNumber = Number(textQuestionArray[8]) - Number(textQuestionArray[7]);
-    result = Number(textQuestionArray[mysteryIndex - 1]) + plusNumber;
+    result = Number(textQuestionArray[mysteryIndex + 1]) - plusNumber;
   } else {
     plusNumber = Number(textQuestionArray[3]) - Number(textQuestionArray[2]);
     result = Number(textQuestionArray[mysteryIndex - 1]) + plusNumber;

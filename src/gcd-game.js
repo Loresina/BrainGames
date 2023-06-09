@@ -18,8 +18,8 @@ const getRightAnswer = (textQuestion) => {
   const count = firstNumber > secondNumber ? secondNumber : firstNumber;
 
   for (let i = count; i > 0; i -= 1) {
-    if (firstNumber % count === 0 && secondNumber % count === 0) {
-      return count;
+    if (firstNumber % i === 0 && secondNumber % i === 0) {
+      return i;
     }
   }
   return 1;
