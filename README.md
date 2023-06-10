@@ -8,11 +8,10 @@
 ### Description
 
 <b>Brain Games</b> is a set of five console games.
-<br>Each game asks a question.
-<br>A player must answer correctly.
-If the player answered correctly 3 he becomes the winner.
-If a player makes a mistake, the game stops.
-<br><b>Games include:</b>
+<br>Each game asks a question and a player must answer.
+<br>If the player answered correctly 3 times, he becomes the winner!
+<br>If the player makes a mistake, the game stops.
+<hr><b>Games include:</b>
 <br><b>Brain-even.</b> Determining an even number.
 <br><b>Brain-calc.</b> Arithmetic expressions that need to be calculated.
 <br><b>Brain-gcd.</b> Determination of the greatest common divisor.

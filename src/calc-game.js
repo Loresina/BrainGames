@@ -25,11 +25,9 @@ const getRightAnswer = (textQuestion) => {
 };
 
 const calcGame = () => {
-  const questionTexst = 'What is the result of the expression?';
-  const textQuestion = createQuestion;
-  const rightAnswer = getRightAnswer;
+  const theQuestion = 'What is the result of the expression?';
 
-  gameLevel(questionTexst, textQuestion, rightAnswer);
+  gameLevel(theQuestion, createQuestion, getRightAnswer);
 };
 
 export default calcGame;

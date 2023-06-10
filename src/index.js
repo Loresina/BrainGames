@@ -7,14 +7,14 @@ const check = (ans, rightAns) => {
   return false;
 };
 
-const gameLevel = (correctQuestion, createQuestion, getRightAnswer) => {
+const gameLevel = (theQuestion, createQuestion, getRightAnswer) => {
   // greeting
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}!`);
 
   // question
-  console.log(correctQuestion);
+  console.log(theQuestion);
 
   // levels counter
   let count = 1;

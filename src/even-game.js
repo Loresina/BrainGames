@@ -8,19 +8,17 @@ const createQuestion = () => {
   return result;
 };
 
-const getRightAnswer = (textQuestion) => {
-  if (textQuestion % 2 === 0) {
+const getRightAnswer = (question) => {
+  if (question % 2 === 0) {
     return 'yes';
   }
   return 'no';
 };
 
 const evenGame = () => {
-  const questionTexst = 'Answer "yes" if the number is even, otherwise answer "no".';
-  // const textQuestion = createQuestion;
-  // const rightAnswer = getRightAnswer;
+  const theQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  gameLevel(questionTexst, createQuestion, getRightAnswer);
+  gameLevel(theQuestion, createQuestion, getRightAnswer);
 };
 
 export default evenGame;

@@ -36,8 +36,7 @@ const getRightAnswer = (textQuestion) => {
 
 const progressionGame = () => {
   const theQuestion = 'What number is missing in the progression?';
-  // const textQuestion = createQuestion;
-  // const rightAnswer = getRightAnswer;
+
   gameLevel(theQuestion, createQuestion, getRightAnswer);
 };
 

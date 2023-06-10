@@ -27,8 +27,6 @@ const getRightAnswer = (textQuestion) => {
 
 const gcdGame = () => {
   const theQuestion = 'Find the greatest common divisor of given numbers.';
-  // const textQuestion = createQuestion;
-  // const rightAnswer = getRightAnswer;
 
   gameLevel(theQuestion, createQuestion, getRightAnswer);
 };

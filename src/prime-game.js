@@ -8,8 +8,8 @@ const createQuestion = () => {
   return result;
 };
 
-const getRightAnswer = (textQuestion) => {
-  const number = Number(textQuestion);
+const getRightAnswer = (question) => {
+  const number = question;
   if (number === 1) {
     return 'no';
   }
@@ -20,11 +20,9 @@ const getRightAnswer = (textQuestion) => {
 };
 
 const primeGame = () => {
-  const questionTexst = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  // const textQuestion = createQuestion;
-  // const rightAnswer = getRightAnswer;
+  const theQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  gameLevel(questionTexst, createQuestion, getRightAnswer);
+  gameLevel(theQuestion, createQuestion, getRightAnswer);
 };
 
 export default primeGame;
