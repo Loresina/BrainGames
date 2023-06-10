@@ -7,16 +7,26 @@
 
 ### Description
 
-<b>Brain Games</b> is a set of five console games.
-<br>Each game asks a question and a player must answer.
-<br>If the player answered correctly 3 times, he becomes the winner!
-<br>If the player makes a mistake, the game stops.
-<hr><b>Games include:</b>
-<br><b>Brain-even.</b> Determining an even number.
-<br><b>Brain-calc.</b> Arithmetic expressions that need to be calculated.
-<br><b>Brain-gcd.</b> Determination of the greatest common divisor.
-<br><b>Brain-progression.</b> Finding missing numbers in a sequence of numbers.
-<br><b>Brain-prime.</b> Determination of a prime number.
+**Brain Games** is a set of five console games.  
+Each game asks a question and a player must answer.  
+If the player answered correctly 3 times, he becomes the winner!  
+If the player makes a mistake, the game stops.  
+**Games include:**
+**Brain-even.** Determining an even number.  
+**Brain-calc.** Arithmetic expressions that need to be calculated.  
+**Brain-gcd.** Determination of the greatest common divisor.  
+**Brain-progression.** Finding missing numbers in a sequence of numbers.  
+**Brain-prime.** Determination of a prime number.  
+
+### Installation
+
+Use Node.js v16.16.0 and greater is required.  
+Install the game by command in terminal. And run every game with a different command.
+
+```
+  $ make install
+  $ brain-even
+```
 
 ### How to begin and start first game BRAIN-EVEN
 
