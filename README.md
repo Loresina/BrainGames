@@ -10,7 +10,8 @@
 **Brain Games** is a set of five console games.  
 Each game asks a question and a player must answer.  
 If the player answered correctly 3 times, he becomes the winner!  
-If the player makes a mistake, the game stops.  
+If the player makes a mistake, the game stops.
+  
 **Games include:**
 **Brain-even.** Determining an even number.  
 **Brain-calc.** Arithmetic expressions that need to be calculated.  
