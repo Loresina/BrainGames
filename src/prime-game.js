@@ -2,7 +2,7 @@ import gameLevel from './index.js';
 
 const createQuestion = () => {
   const result = Math.floor(Math.random() * 100);
-  if (result === 0 || result === 1) {
+  if (result === 1) {
     createQuestion();
   }
   return result;
