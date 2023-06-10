@@ -34,7 +34,7 @@
 
 <a href="https://asciinema.org/a/590654" target="_blank"><img src="https://asciinema.org/a/590654.svg" /></a>
 
-### BRAIN-PRIM
+### BRAIN-PRIME
 
 <a href="https://asciinema.org/a/590656" target="_blank"><img src="https://asciinema.org/a/590656.svg" /></a>
 
