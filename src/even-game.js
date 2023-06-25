@@ -1,24 +1,23 @@
-import gameLevel from './index.js';
+import runGameLevel from './index.js';
 
 const createQuestion = () => {
-  const result = Math.floor(Math.random() * 100);
-  if (result === 0) {
+  const question = Math.floor(Math.random() * 100);
+  if (question === 0) {
     createQuestion();
   }
-  return result;
-};
 
-const getRightAnswer = (question) => {
+  let rightAnswer = '';
   if (question % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
+    rightAnswer = 'yes';
+  } else { rightAnswer = 'no'; }
+
+  return [question, rightAnswer];
 };
 
 const evenGame = () => {
-  const theQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  gameLevel(theQuestion, createQuestion, getRightAnswer);
+  runGameLevel(gameDescription, createQuestion);
 };
 
 export default evenGame;

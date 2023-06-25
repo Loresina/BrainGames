@@ -1,33 +1,33 @@
-import gameLevel from './index.js';
+import runGameLevel from './index.js';
 
 const createQuestion = () => {
   const randomNumber = () => Math.floor(Math.random() * 100);
   const operators = ['-', '+', '*'];
   const operator = operators[Math.floor(Math.random() * 3)];
 
-  return `${randomNumber()} ${operator} ${randomNumber()}`;
-};
+  const question = `${randomNumber()} ${operator} ${randomNumber()}`;
 
-const getRightAnswer = (textQuestion) => {
-  const textQuestionArray = textQuestion.split(' ');
-  const firstNumber = Number(textQuestionArray[0]);
-  const secondNumber = Number(textQuestionArray[2]);
-  const operation = textQuestionArray[1];
+  const questionArray = question.split(' ');
+  const firstNumber = Number(questionArray[0]);
+  const secondNumber = Number(questionArray[2]);
+  const action = questionArray[1];
 
-  switch (operation) {
-    case '+':
-      return firstNumber + secondNumber;
-    case '-':
-      return firstNumber - secondNumber;
-    default:
-      return firstNumber * secondNumber;
+  let rightAnswer = 0;
+  if (action === '+') {
+    rightAnswer = firstNumber + secondNumber;
+  } else if (action === '-') {
+    rightAnswer = firstNumber - secondNumber;
+  } else if (action === '*') {
+    rightAnswer = firstNumber * secondNumber;
   }
+
+  return [question, rightAnswer];
 };
 
 const calcGame = () => {
-  const theQuestion = 'What is the result of the expression?';
+  const gameDescription = 'What is the result of the expression?';
 
-  gameLevel(theQuestion, createQuestion, getRightAnswer);
+  runGameLevel(gameDescription, createQuestion);
 };
 
 export default calcGame;

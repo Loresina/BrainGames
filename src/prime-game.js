@@ -1,28 +1,26 @@
-import gameLevel from './index.js';
+import runGameLevel from './index.js';
 
 const createQuestion = () => {
-  const result = Math.floor(Math.random() * 100);
-  if (result === 1) {
+  const question = Math.floor(Math.random() * 100);
+  if (question === 1) {
     createQuestion();
   }
-  return result;
-};
 
-const getRightAnswer = (question) => {
-  const number = question;
-  if (number === 1) {
-    return 'no';
+  let rightAnswer = '';
+  for (let i = 2; i < question; i += 1) {
+    if (question % i === 0) {
+      rightAnswer = 'no';
+      break;
+    }
+    rightAnswer = 'yes';
   }
-  for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) return 'no';
-  }
-  return 'yes';
+  return [question, rightAnswer];
 };
 
 const primeGame = () => {
-  const theQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  gameLevel(theQuestion, createQuestion, getRightAnswer);
+  runGameLevel(gameDescription, createQuestion);
 };
 
 export default primeGame;

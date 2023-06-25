@@ -1,31 +1,22 @@
 import readlineSync from 'readline-sync';
 
-const check = (ans, rightAns) => {
-  if (ans === rightAns) {
-    return true;
-  }
-  return false;
-};
-
-const gameLevel = (theQuestion, createQuestion, getRightAnswer) => {
+const runGameLevel = (gameDescription, createQuestion) => {
   // greeting
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
   // question
-  console.log(theQuestion);
+  console.log(gameDescription);
 
   // levels counter
   let count = 1;
   while (count < 4) {
-    const textQuestion = createQuestion();
-    const rightAnswer = String(getRightAnswer(textQuestion));
+    const [textQuestion, rightAnswer] = createQuestion();
     console.log(`Question: ${textQuestion}`);
     const theAnswer = readlineSync.question('Your answer: ');
-    const result = check(theAnswer, rightAnswer);
 
-    if (result === false) {
+    if (theAnswer !== String(rightAnswer)) {
       console.log(
         `${theAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${userName}!`,
       );
@@ -37,4 +28,4 @@ const gameLevel = (theQuestion, createQuestion, getRightAnswer) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default gameLevel;
+export default runGameLevel;

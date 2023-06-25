@@ -1,34 +1,34 @@
-import gameLevel from './index.js';
+import runGameLevel from './index.js';
 
-const createQuestion = () => `${Math.floor(Math.random() * 10)} ${Math.floor(Math.random() * 10)}`;
+const createQuestion = () => {
+  const question = `${Math.floor(Math.random() * 10)} ${Math.floor(Math.random() * 10)}`;
 
-const getRightAnswer = (textQuestion) => {
-  const textQuestionArray = textQuestion.split(' ');
-  const firstNumber = Number(textQuestionArray[0]);
-  const secondNumber = Number(textQuestionArray[1]);
+  const questionArray = question.split(' ');
+  const firstNumber = Number(questionArray[0]);
+  const secondNumber = Number(questionArray[1]);
 
+  let rightAnswer = 0;
   if (firstNumber === secondNumber) {
-    return firstNumber;
+    rightAnswer = firstNumber;
   }
-
   if (firstNumber === 0 || secondNumber === 0) {
-    return firstNumber + secondNumber;
+    rightAnswer = firstNumber + secondNumber;
   }
-
   const count = firstNumber > secondNumber ? secondNumber : firstNumber;
-
   for (let i = count; i > 0; i -= 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {
-      return i;
+      rightAnswer = i;
+      break;
     }
+    rightAnswer = 1;
   }
-  return 1;
+  return [question, rightAnswer];
 };
 
 const gcdGame = () => {
-  const theQuestion = 'Find the greatest common divisor of given numbers.';
+  const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-  gameLevel(theQuestion, createQuestion, getRightAnswer);
+  runGameLevel(gameDescription, createQuestion);
 };
 
 export default gcdGame;

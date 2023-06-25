@@ -1,4 +1,4 @@
-import gameLevel from './index.js';
+import runGameLevel from './index.js';
 
 const createQuestion = () => {
   let nextNumber = Math.floor(Math.random() * 10);
@@ -13,31 +13,18 @@ const createQuestion = () => {
     nextNumber += plusNumber;
   }
 
+  const rightAnswer = progression[index];
+
   progression[index] = '..';
+  const qestion = progression.join(' ');
 
-  return progression.join(' ');
-};
-
-const getRightAnswer = (textQuestion) => {
-  const textQuestionArray = textQuestion.split(' ');
-  const mysteryIndex = textQuestionArray.indexOf('..');
-  let plusNumber = 0;
-  let result = 0;
-
-  if (mysteryIndex <= 5) {
-    plusNumber = Number(textQuestionArray[8]) - Number(textQuestionArray[7]);
-    result = Number(textQuestionArray[mysteryIndex + 1]) - plusNumber;
-  } else {
-    plusNumber = Number(textQuestionArray[3]) - Number(textQuestionArray[2]);
-    result = Number(textQuestionArray[mysteryIndex - 1]) + plusNumber;
-  }
-  return result;
+  return [qestion, rightAnswer];
 };
 
 const progressionGame = () => {
-  const theQuestion = 'What number is missing in the progression?';
+  const gameDescription = 'What number is missing in the progression?';
 
-  gameLevel(theQuestion, createQuestion, getRightAnswer);
+  runGameLevel(gameDescription, createQuestion);
 };
 
 export default progressionGame;
