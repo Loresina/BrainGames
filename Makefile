@@ -1,4 +1,7 @@
 brain-even:
+	bin/brain-games.js
+
+brain-even:
 	bin/brain-even.js
 
 brain-calc:
