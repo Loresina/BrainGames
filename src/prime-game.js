@@ -2,7 +2,7 @@ import runGameLevel from './index.js';
 
 const createQuestion = () => {
   const question = Math.floor(Math.random() * 100);
-  if (question === 1) {
+  if (question === 1 || question === 0) {
     createQuestion();
   }
 
